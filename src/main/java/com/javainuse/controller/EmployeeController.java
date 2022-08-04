@@ -18,6 +18,13 @@ public class EmployeeController {
 
 	private List<Employee> employees = createList();
 
+
+	@RequestMapping(value = "/badgers", method = RequestMethod.GET, produces = "application/json")
+	public String badgers() {
+		return "{ \"badgers\":\"badgers\" }";
+	}
+
+
 	@RequestMapping(value = "/employees", method = RequestMethod.GET, produces = "application/json")
 	public List<Employee> firstPage() {
 		return employees;
